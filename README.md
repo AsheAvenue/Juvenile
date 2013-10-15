@@ -20,6 +20,7 @@ Installation
 - Copy config.yml.example to config.yml and edit accordingly.
 - Install the required gems:
 
+
     gem install aws-sdk
 
 Config
