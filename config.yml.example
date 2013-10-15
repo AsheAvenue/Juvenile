@@ -1,27 +1,40 @@
 apps:
-  kitchendaily:
+  <key>:
     db:
-      host: 127.0.0.1
-      database: kitchendaily
-      username: root
-      password: root
+      host: <database host>
+      database: <database name>
+      username: <database user>
+      password: <database password>
     s3:
-      access_key_id: AKIAISZJ7YPZRSTF6LQQ
-      secret_access_key: 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
-      bucket: aol-database-backups
-      subdirectory: kitchendaily
-    number_of_days_to_keep: 7
-    prefix: db_backup_
-  homesessive:
+      access_key_id: <AWS access key id>
+      secret_access_key: <AWS secret access key>
+      bucket: <S3 bucket to use>
+      subdirectory: <a subdirectory in the bucket>
+    number_of_days_to_keep: <7, for example>
+    prefix: <"db_backup_", for example>
+  <key>:
     db:
-      host: 127.0.0.1
-      database: homesessive
-      username: root
-      password: root
+      host: <database host>
+      database: <database name>
+      username: <database user>
+      password: <database password>
     s3:
-      access_key_id: AKIAISZJ7YPZRSTF6LQQ
-      secret_access_key: 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
-      bucket: aol-database-backups
-      subdirectory: homesessive
-    number_of_days_to_keep: 7
-    prefix: db_backup_
+      access_key_id: <AWS access key id>
+      secret_access_key: <AWS secret access key>
+      bucket: <S3 bucket to use>
+      subdirectory: <a subdirectory in the bucket>
+    number_of_days_to_keep: <7, for example>
+    prefix: <"db_backup_", for example>
+  <key>:
+    db:
+      host: <database host>
+      database: <database name>
+      username: <database user>
+      password: <database password>
+    s3:
+      access_key_id: <AWS access key id>
+      secret_access_key: <AWS secret access key>
+      bucket: <S3 bucket to use>
+      subdirectory: <a subdirectory in the bucket>
+    number_of_days_to_keep: <7, for example>
+    prefix: <"db_backup_", for example>
