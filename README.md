@@ -1,7 +1,17 @@
 Juvenile
 ========
 
-A simple tool for managing database backups and making sandwiches.
+A simple tool for managing database backups and making sandwiches. 
+
+Features
+--------
+
+- Runs a mysqldump of the specified database
+- Tarballs the dump file
+- Pushes the tarballed dump file to the specified S3 bucket
+- Removes old backup from S3
+- Can run across any number of databases and S3 buckets
+- Can be scheduled via cron or other process scheduler to run regularly
 
 Installation
 ------------
@@ -46,6 +56,12 @@ Single use:
 Or run it via a cron job. This job, for example, will run every day at midnight:
 
     * 0 * * * /usr/bin/ruby <path to juvenile.rb>
+
+Future plans
+------------
+
+- Postgres support
+- Email a specified address on upload failure
 
 Credits + License
 -----------------
