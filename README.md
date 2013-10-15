@@ -9,6 +9,28 @@ Installation
 - Fork or clone this repo.
 - Copy config.yml.example to config.yml and edit accordingly.
 
+Config
+------
+
+    apps:
+      <app key>:
+        db:
+          host: <database host>
+          database: <database name>
+          username: <database user>
+          password: <database password>
+        s3:
+          access_key_id: <AWS access key id>
+          secret_access_key: <AWS secret access key>
+          bucket: <S3 bucket to use>
+          subdirectory: <a subdirectory in the bucket>
+        number_of_days_to_keep: <7, for example>
+        prefix: <"db_backup_", for example>
+        
+- Give each app a unique, single-word key
+- Input the number of days of logs you want to keep. 7 is a nice number, for example. Juvenile will remove any of this app's database backups from S3 that are more than this number of days old.
+- Add a prefix for the file name if you think it'll help you manage the file later.
+
 Usage
 -----
 

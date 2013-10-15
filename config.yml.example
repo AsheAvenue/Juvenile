@@ -1,5 +1,5 @@
 apps:
-  <key>:
+  <app key>:
     db:
       host: <database host>
       database: <database name>
@@ -12,7 +12,7 @@ apps:
       subdirectory: <a subdirectory in the bucket>
     number_of_days_to_keep: <7, for example>
     prefix: <"db_backup_", for example>
-  <key>:
+  <app key>:
     db:
       host: <database host>
       database: <database name>
@@ -25,7 +25,7 @@ apps:
       subdirectory: <a subdirectory in the bucket>
     number_of_days_to_keep: <7, for example>
     prefix: <"db_backup_", for example>
-  <key>:
+  <app key>:
     db:
       host: <database host>
       database: <database name>
