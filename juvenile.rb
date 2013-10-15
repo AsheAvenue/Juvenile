@@ -104,7 +104,7 @@ config['apps'].each do |app, settings|
     objects.delete_if {|obj| 
       time_now = Time.new
       minutes_old = (time_now - obj.last_modified) / 60
-      minutes_old > 10 #(number_of_days_to_keep * 24 * 60)
+      minutes_old > (number_of_days_to_keep * 24 * 60)
     }
   
   else
