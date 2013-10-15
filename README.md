@@ -53,7 +53,7 @@ Single use:
     
 Or run it via a cron job. This job, for example, will run every day at midnight:
 
-    * 0 * * * /usr/bin/ruby <path to juvenile.rb>
+    0 0 * * * /usr/bin/ruby <path to juvenile.rb>
 
 Future plans
 ------------
