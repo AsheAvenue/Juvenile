@@ -1,6 +1,7 @@
 apps:
   <app key>:
     db:
+      type: <mysql or pg>
       host: <database host>
       database: <database name>
       username: <database user>
@@ -14,6 +15,7 @@ apps:
     prefix: <"db_backup_", for example>
   <app key>:
     db:
+      type: <mysql or pg>
       host: <database host>
       database: <database name>
       username: <database user>
@@ -27,6 +29,7 @@ apps:
     prefix: <"db_backup_", for example>
   <app key>:
     db:
+      type: <mysql or pg>
       host: <database host>
       database: <database name>
       username: <database user>

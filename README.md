@@ -6,7 +6,7 @@ A simple tool for managing database backups and making sandwiches.
 Features
 --------
 
-- Runs a mysqldump of the specified database
+- Runs a dump of the specified database
 - Tarballs the dump file
 - Pushes the tarballed dump file to the specified S3 bucket
 - Removes old backup from S3
@@ -26,6 +26,7 @@ Config
     apps:
       <app key>:
         db:
+          type: <mysql or pg>
           host: <database host>
           database: <database name>
           username: <database user>
@@ -58,7 +59,7 @@ Or run it via a cron job. This job, for example, will run every day at midnight:
 Future plans
 ------------
 
-- Postgres support
+- Finish Postgres support
 - Email a specified address on upload failure
 
 Credits + License

@@ -36,6 +36,7 @@ results = []
 config['apps'].each do |app, settings|
   
   #Set variables based on the config
+  db_type = settings['db']['type']
   db_host = settings['db']['host']
   db_name = settings['db']['database']
   db_username = settings['db']['username']
@@ -50,11 +51,16 @@ config['apps'].each do |app, settings|
   Helpers.output log, "info", ""
   Helpers.output log, "info",  "Backing up #{app}"
   
-  #Run a mysqldump and save the file locally
-  Helpers.output log, "info",  "- Running mysqldump"
-  dump_name = "#{prefix}#{app}_#{Time.now.strftime("%Y%m%d%H%M")}.sql"
-  command = "mysqldump -u#{db_username} -p#{db_password} -h#{db_host} --hex-blob #{db_name} > ./#{dump_name}"
-  result = `#{command}`
+  if db_type == "mysql"
+    #Run a mysqldump and save the file locally
+    Helpers.output log, "info",  "- Running mysqldump"
+    dump_name = "#{prefix}#{app}_#{Time.now.strftime("%Y%m%d%H%M")}.sql"
+    command = "mysqldump -u#{db_username} -p#{db_password} -h#{db_host} --hex-blob #{db_name} > ./#{dump_name}"
+    result = `#{command}`
+  elsif db_type == "pg"
+    
+  end
+  
   Helpers.output log, "info",  "- Dump saved locally: #{dump_name}"
   
   #Tarball the file
