@@ -57,7 +57,7 @@ config['apps'].each do |app, settings|
     dump_name = "#{prefix}#{app}_#{Time.now.strftime("%Y%m%d%H%M")}.sql"
     command = "mysqldump -u#{db_username} -p#{db_password} -h#{db_host} --hex-blob #{db_name} > ./#{dump_name}"
     result = `#{command}`
-  elsif db_type == "pg"
+  elsif db_type == "herokupg"
     
   end
   

@@ -26,7 +26,7 @@ Config
     apps:
       <app key>:
         db:
-          type: <mysql or pg>
+          type: <mysql or herokupg>
           host: <database host>
           database: <database name>
           username: <database user>
