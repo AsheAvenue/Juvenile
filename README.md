@@ -65,6 +65,6 @@ Future plans
 Credits + License
 -----------------
 
-&copy; 2013 Ashe Avenue. Created by Tim Boisvert and Rob Farrell
+&copy; 2014 Ashe Avenue. Created by Tim Boisvert and Rob Farrell
 
 Juvenile is released under the MIT license

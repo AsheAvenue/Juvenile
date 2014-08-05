@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-sdk (1.43.1)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+    curb (0.8.6)
+    json (1.8.1)
+    mini_portile (0.6.0)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
+    rake (10.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  aws-sdk
+  curb
+  json
+  rake
